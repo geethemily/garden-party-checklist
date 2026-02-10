@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Garden Party Checklist</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background-color: #F6F3EE;
+      background-color: #F5F2EF;
       color: #2F3E34;
-      line-height: 1.6;
     }
 
     header {
@@ -24,15 +25,13 @@
       background-position: center;
       background-attachment: fixed;
       position: relative;
+      z-index: 0;
     }
 
     header::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background-color: rgba(232, 207, 200, 0.8);
       z-index: -1;
     }
@@ -47,13 +46,14 @@
 
     header p {
       font-size: 1.2rem;
+      color: #2F3E34;
       position: relative;
       z-index: 1;
     }
 
     .container {
       max-width: 900px;
-      margin: 40px auto;
+      margin: auto;
       padding: 0 20px;
     }
 
@@ -109,6 +109,7 @@
     }
 
     .section h2 {
+      font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       font-size: 1.8rem;
       color: #A8BBA3;
@@ -116,34 +117,25 @@
     }
 
     .section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .section ul li {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 12px;
-    }
-
-    .section ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #E8CFC8;
-      font-weight: bold;
+      padding-left: 20px;
+      line-height: 1.7;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
       background-color: #E8CFC8;
+      color: #2F3E34;
       font-style: italic;
     }
 
     @media (max-width: 600px) {
       header h1 {
         font-size: 2.2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
       }
 
       .intro-section p {
@@ -161,21 +153,40 @@
 
   <header>
     <h1>My First Garden Party</h1>
-    <p>A simple timeline checklist for stress-free hosting 🌿</p>
+    <p>A gentle checklist for hosting without losing your mind</p>
   </header>
 
   <div class="container">
 
     <div class="intro-section">
       <img src="images/garden-intro.jpg" alt="Beautiful garden party setup" class="intro-image">
+
       <h2>My First Garden Party</h2>
-      <p>You might know better than me that organizing a party is no small feat—it's quietly strenuous and surprisingly managerial. My first garden party taught me that hosting isn't just about pretty tables or good food; it's about planning, timing, improvising, and holding a hundred little details together while making it all look effortless.</p>
 
-      <p>My good lord, the list of things you're keeping track of in your head is beyond anything I managed even during the peak of my exam seasons. Timelines, menus, seating, weather backups, décor, guest comfort—every detail running in parallel, with no pause button and no syllabus to follow. And on top of it all, the 9–5 grind, the usual meal routines, and kids' lessons are all expected to continue as if nothing extraordinary is happening. Insane, right? It's a quiet kind of mental marathon—the sort that doesn't look dramatic from the outside but demands constant attention, decision-making, and emotional energy. Honestly, hosting might just be the most socially acceptable form of multi-tasking chaos.</p>
+      <p>
+        You might know better than me that organizing a party is no small feat—it's quietly strenuous and surprisingly managerial.
+        My first garden party taught me that hosting isn't just about pretty tables or good food; it's about planning, timing,
+        improvising, and holding a hundred little details together while making it all look effortless.
+      </p>
 
-      <p>There were moments of mild chaos, last-minute adjustments, and a constant mental checklist running in the background. Yet, somewhere between arranging flowers, welcoming guests, and hearing laughter ripple through the garden, the effort softened into something meaningful. The space felt alive—warm conversations, shared food, and the gentle comfort of people simply being present.</p>
+      <p>
+        My good lord, the list of things you're keeping track of in your head is beyond anything I managed even during the peak
+        of my exam seasons. Timelines, menus, seating, weather backups, décor, guest comfort—every detail running in parallel,
+        with no pause button and no syllabus to follow. And on top of it all, the 9–5 grind, the usual meal routines, and kids'
+        lessons are all expected to continue as if nothing extraordinary is happening. Insane, right?
+      </p>
 
-      <p>By the end of the evening, I realized the true reward of hosting isn't perfection—it's connection. And despite the exhaustion, I walked away proud, knowing that my first garden party was not just an event, but a memory thoughtfully created.</p>
+      <p>
+        There were moments of mild chaos, last-minute adjustments, and a constant mental checklist running in the background.
+        Yet, somewhere between arranging flowers, welcoming guests, and hearing laughter ripple through the garden, the effort
+        softened into something meaningful.
+      </p>
+
+      <p>
+        By the end of the evening, I realized the true reward of hosting isn't perfection—it's connection.
+        And despite the exhaustion, I walked away proud, knowing that my first garden party was not just an event,
+        but a memory thoughtfully created.
+      </p>
     </div>
 
     <div class="section">
@@ -183,9 +194,9 @@
       <h2>1–2 Weeks Before</h2>
       <ul>
         <li>Pick date & guest list</li>
-        <li>Decide theme & colors</li>
-        <li>Plan menu & drinks</li>
-        <li>Send invitations</li>
+        <li>Decide menu & drinks</li>
+        <li>Plan seating & layout</li>
+        <li>Check garden & lighting needs</li>
       </ul>
     </div>
 
@@ -194,9 +205,8 @@
       <h2>5–7 Days Before</h2>
       <ul>
         <li>Shop non-perishables</li>
-        <li>Plan seating & layout</li>
-        <li>Test lights & speakers</li>
-        <li>Tidy up the garden</li>
+        <li>Confirm rentals (tables, chairs)</li>
+        <li>Prep decor items</li>
       </ul>
     </div>
 
@@ -205,9 +215,18 @@
       <h2>2–3 Days Before</h2>
       <ul>
         <li>Grocery shop (fresh items)</li>
-        <li>Clean indoor & outdoor spaces</li>
-        <li>Prep make-ahead food</li>
-        <li>Chill drinks</li>
+        <li>Prep sauces & marinades</li>
+        <li>Clean fridge & prep space</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>1 Day Before</h2>
+      <ul>
+        <li>Set tables & chairs</li>
+        <li>Lay linens & décor</li>
+        <li>Final garden sweep</li>
+        <li>Confirm RSVPs</li>
       </ul>
     </div>
 
@@ -216,9 +235,9 @@
       <h2>Day Of</h2>
       <ul>
         <li>Finish food prep</li>
-        <li>Set up drink station</li>
-        <li>Music & candles ready</li>
-        <li>Welcome guests</li>
+        <li>Chill drinks</li>
+        <li>Light candles & music</li>
+        <li>Welcome guests and breathe</li>
       </ul>
     </div>
 
@@ -227,15 +246,15 @@
       <h2>After the Party</h2>
       <ul>
         <li>Clear food safely</li>
-        <li>Quick cleanup</li>
-        <li>Rest & reflect</li>
+        <li>Pack rentals</li>
+        <li>Send thank-you messages</li>
       </ul>
     </div>
 
   </div>
 
   <footer>
-    Hosting is quietly strenuous… but always worth it 💛
+    Hosting isn’t about perfection — it’s about presence.
   </footer>
 
 </body>
