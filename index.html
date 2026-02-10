@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Garden Party Checklist</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -18,17 +19,36 @@
       text-align: center;
       padding: 50px 20px 30px;
       background-color: #E8CFC8;
+      background-image: url('images/cherry-blossom-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(232, 207, 200, 0.8);
+      z-index: -1;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #2F3E34;
+      position: relative;
+      z-index: 1;
     }
 
     .container {
@@ -37,16 +57,58 @@
       padding: 0 20px;
     }
 
+    .intro-section {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .intro-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      object-fit: cover;
+      max-height: 350px;
+    }
+
+    .intro-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #A8BBA3;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #2F3E34;
+    }
+
+    .intro-section p:last-child {
+      margin-bottom: 0;
+    }
+
     .section {
       background-color: #fff;
       border-radius: 20px;
       padding: 30px 25px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
+    .section img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
     .section h2 {
-      font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       font-size: 1.8rem;
       color: #A8BBA3;
@@ -76,7 +138,6 @@
       text-align: center;
       padding: 30px 20px;
       background-color: #E8CFC8;
-      color: #2F3E34;
       font-style: italic;
     }
 
@@ -84,12 +145,18 @@
       header h1 {
         font-size: 2.2rem;
       }
-      .section h2 {
-        font-size: 1.5rem;
+
+      .intro-section p {
+        text-align: left;
+      }
+
+      .intro-image {
+        max-height: 250px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -99,7 +166,20 @@
 
   <div class="container">
 
+    <div class="intro-section">
+      <img src="images/garden-intro.jpg" alt="Beautiful garden party setup" class="intro-image">
+      <h2>My First Garden Party</h2>
+      <p>You might know better than me that organizing a party is no small feat—it's quietly strenuous and surprisingly managerial. My first garden party taught me that hosting isn't just about pretty tables or good food; it's about planning, timing, improvising, and holding a hundred little details together while making it all look effortless.</p>
+
+      <p>My good lord, the list of things you're keeping track of in your head is beyond anything I managed even during the peak of my exam seasons. Timelines, menus, seating, weather backups, décor, guest comfort—every detail running in parallel, with no pause button and no syllabus to follow. And on top of it all, the 9–5 grind, the usual meal routines, and kids' lessons are all expected to continue as if nothing extraordinary is happening. Insane, right? It's a quiet kind of mental marathon—the sort that doesn't look dramatic from the outside but demands constant attention, decision-making, and emotional energy. Honestly, hosting might just be the most socially acceptable form of multi-tasking chaos.</p>
+
+      <p>There were moments of mild chaos, last-minute adjustments, and a constant mental checklist running in the background. Yet, somewhere between arranging flowers, welcoming guests, and hearing laughter ripple through the garden, the effort softened into something meaningful. The space felt alive—warm conversations, shared food, and the gentle comfort of people simply being present.</p>
+
+      <p>By the end of the evening, I realized the true reward of hosting isn't perfection—it's connection. And despite the exhaustion, I walked away proud, knowing that my first garden party was not just an event, but a memory thoughtfully created.</p>
+    </div>
+
     <div class="section">
+      <img src="images/planning.jpg" alt="Planning a garden party">
       <h2>1–2 Weeks Before</h2>
       <ul>
         <li>Pick date & guest list</li>
@@ -110,6 +190,7 @@
     </div>
 
     <div class="section">
+      <img src="images/decor.jpg" alt="Garden decor and seating">
       <h2>5–7 Days Before</h2>
       <ul>
         <li>Shop non-perishables</li>
@@ -120,6 +201,7 @@
     </div>
 
     <div class="section">
+      <img src="images/food-prep.jpg" alt="Food preparation">
       <h2>2–3 Days Before</h2>
       <ul>
         <li>Grocery shop (fresh items)</li>
@@ -130,16 +212,7 @@
     </div>
 
     <div class="section">
-      <h2>1 Day Before</h2>
-      <ul>
-        <li>Set tables & chairs</li>
-        <li>Lay linens & decor</li>
-        <li>Final garden sweep</li>
-        <li>Confirm RSVPs</li>
-      </ul>
-    </div>
-
-    <div class="section">
+      <img src="images/party.jpg" alt="Garden party in progress">
       <h2>Day Of</h2>
       <ul>
         <li>Finish food prep</li>
@@ -150,6 +223,7 @@
     </div>
 
     <div class="section">
+      <img src="images/cleanup.jpg" alt="After party cleanup">
       <h2>After the Party</h2>
       <ul>
         <li>Clear food safely</li>
